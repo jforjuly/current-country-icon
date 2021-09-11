@@ -3,9 +3,7 @@
   "description": "Extension icon changes according to user's IP address. Icons by Freepik https://www.flaticon.com/ru",
   "version": "2.0",
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "scripts": ["background.js"]
   },
   "manifest_version": 2,
   "browser_action": {},
