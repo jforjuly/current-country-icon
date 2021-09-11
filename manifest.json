@@ -1,7 +1,7 @@
 {
-  "name": "My IP Icon",
+  "name": "Show My IP Icon",
   "description": "Extension icon changes according to user's IP address. Icons by Freepik https://www.flaticon.com/ru",
-  "version": "1.0",
+  "version": "2.0",
   "background": {
     "scripts": [
       "background.js"

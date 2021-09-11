@@ -4,18 +4,20 @@ const iconMappings = {
   "DE": "de.png",
   "NL": "nl.png"
 }
-
 const defaultIcon = "un.png"
+const iconsFolder = "icons"
 const changeIcon = (jsonResponse) => {
   const countryCode = jsonResponse["country_code"]
   const newIcon = iconMappings[countryCode] || defaultIcon
-  chrome.browserAction.setIcon({ path: "icons/" + newIcon })
+  chrome.browserAction.setIcon({ path: iconsFolder + "/" + newIcon })
 }
 
-setInterval(() => {
+const interval = 1000
+const updater = () => {
   fetch(apiUrl)
     .then(function (response) {
       return response.json();
     })
     .then(changeIcon);
-}, 5000)
+}
+setInterval(updater, 1000)
